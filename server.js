@@ -23,7 +23,7 @@ app.use('/api/items', items);
 
 //Serve static assets
 if (process.env.NODE_ENV === 'production') {
-  app.user(express.static('client/build'));
+  app.use(express.static('client/build'));
 }
 
 app.get('*', (req, res) => {
