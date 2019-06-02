@@ -14,7 +14,7 @@ export const deleteItem = id => dispatch => {
 };
 export const addItem = item => dispatch => {
   axios
-    .post('api//items', item)
+    .post('api/items', item)
     .then(res => dispatch({ type: ADD_ITEM, item: res.data }));
 };
 export const setItemsLoading = () => {
